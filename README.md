@@ -1,4 +1,4 @@
-# KvUmbrella
+# Key-value storage
 
-**TODO: Add description**
+Client server implementaiton of Key-Value storage in Elixir under an unmbrella project.
 
