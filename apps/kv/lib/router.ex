@@ -4,6 +4,7 @@ defmodule KV.Router do
   to the appropriate node based on the `bucket`.
   """
   def route(bucket, mod, fun, args) do
+
     # Get the first byte of the binary
     first = :binary.first(bucket)
 
@@ -32,6 +33,7 @@ defmodule KV.Router do
   """
   def table do
     # Replace computer-name with your local machine name
-    [{?a..?m, :"foo@system76.local"}, {?n..?z, :"bar@metabox.local"}]
+    #[{?a..?m, :"foo@system76.local"}, {?n..?z, :"bar@metabox.local"}]
+    Application.fetch_env!(:kv, :routing_table)
   end
 end

@@ -19,6 +19,8 @@ defmodule KV.MixProject do
   def application do
     [
       extra_applications: [:logger],
+      #env: [routing_table: [{?a..?m, "foo@system76.local"}, {?n..?z, "bar@metabox.local"}]],
+      env: [routing_table: [{?a..?z, node()}]],
       mod: {KV, []}
     ]
   end
