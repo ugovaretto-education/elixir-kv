@@ -10,9 +10,11 @@ defmodule KvUmbrella.MixProject do
       releases: [
         kvapp: [
           version: "0.1.0",
-          applications: [kv_server: :permanent, kv: :permanent]
+          applications: [kv_server: :permanent, kv: :permanent],
+          cookie: "monster"
         ]
       ]
+
     ]
   end
 
