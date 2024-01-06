@@ -20,3 +20,18 @@ end
 #     {?n..?z, :"kvapp@metabox.local"}
 #   ]
 # end
+
+# Example release configuration with single entry point: two DB servers and one
+# TCP server as entry point
+# releases: [
+#   foo: [
+#     version: "0.0.1",
+#     applications: [kv_server: :permanent, kv: :permanent],
+#     cookie: "weknoweachother"
+#   ],
+#   bar: [
+#     version: "0.0.1",
+#     applications: [kv: :permanent],
+#     cookie: "weknoweachother"
+#   ]
+# ]
