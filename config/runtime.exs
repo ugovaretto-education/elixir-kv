@@ -4,8 +4,8 @@ config :kv, :routing_table, [{?a..?z, node()}]
 # running the same application on two separate systems
 if config_env() == :prod do
   config :kv, :routing_table, [
-    {?a..?m, :"kvapp@system76.local"},
-    {?n..?z, :"kvapp@metabox.local"}
+    {?a..?m, :"kvapp@system76"},
+    {?n..?z, :"kvapp@metabox"}
   ]
 end
 
